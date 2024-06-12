@@ -23,8 +23,8 @@ public class UserRepository {
      return users.get(id);
     }
 
-    public User saveUser(Long id, User user){
-        if (id == null){
+    public User saveUser(User user){
+        if (user.getId() == null){
             user.setId(counter.incrementAndGet()) ;
         }
         users.put(user.getId(), user);

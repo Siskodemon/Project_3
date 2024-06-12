@@ -12,9 +12,9 @@ public class UserService {
     UserRepository userRepository;
 
     public List<User> getAllUsers(){
-        userRepository.saveUser(null, new User("Evgeniy","fbwsdjh@mail.ru"));
-        userRepository.saveUser(null, new User("Dmitriy","rwr@mail.ru"));
-        userRepository.saveUser(null, new User("Alexander","fwetewrt@mail.ru"));
+        userRepository.saveUser(new User(null, "Evgeniy","fbwsdjh@mail.ru"));
+        userRepository.saveUser(new User(null, "Dmitriy","rwr@mail.ru"));
+        userRepository.saveUser(new User(null, "Alexander","fwetewrt@mail.ru"));
         return userRepository.getAllUsers();
     }
 
